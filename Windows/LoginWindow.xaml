@@ -1,0 +1,75 @@
+﻿<Window x:Class="_20.LoginWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:uc="clr-namespace:_20.Windows"
+        xmlns:local="clr-namespace:_20.Windows"
+        mc:Ignorable="d"
+        Background="#eeeeee"
+        Title="Лаборатория №20" Height="450" Width="450"
+        ResizeMode="CanMinimize"
+        WindowStartupLocation="CenterScreen">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="2*"/>
+        </Grid.RowDefinitions>
+        <Grid Grid.Row="1">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="1*"/>
+                <RowDefinition Height="1*"/>
+                <RowDefinition Height="1*"/>
+                <RowDefinition Height="1*"/>
+            </Grid.RowDefinitions>
+            <TextBox x:Name="TB_login" Foreground="#222" Background="#fafafa" Text="" TextChanged="TB_login_TextChanged" HorizontalAlignment="Center" Grid.Row="0"  TextWrapping="NoWrap" VerticalContentAlignment="Center" FontSize="22" VerticalAlignment="Center" Width="300" Height="40" BorderBrush="#92d050"/>
+            <Label x:Name="LB_login" IsHitTestVisible="False" Foreground="#aaa" FontSize="22" Height="40" Width="304" HorizontalAlignment="Center" VerticalAlignment="Center">Логин</Label>
+
+            <PasswordBox PasswordChar="ъ"  x:Name="PB_password" Foreground="#222" Background="#fafafa" PasswordChanged="PB_password_PasswordChanged" HorizontalAlignment="Center" Grid.Row="1" VerticalContentAlignment="Center" FontSize="22" VerticalAlignment="Center" Width="300" Height="40" BorderBrush="#92d050"/>
+            <Label x:Name="LB_password" IsHitTestVisible="False" Grid.Row="1" Foreground="#aaa" FontSize="22" Height="40" Width="304" HorizontalAlignment="Center" VerticalAlignment="Center">Пароль</Label>
+            <TextBox Visibility="Hidden" x:Name="TB_password_unmask" Foreground="#222" Background="#fafafa" Text="" HorizontalAlignment="Center" Grid.Row="1"  TextWrapping="NoWrap" VerticalContentAlignment="Center" FontSize="22" VerticalAlignment="Center" Width="300" Height="40" BorderBrush="#92d050"/>
+
+            <Button Click="Login_button" x:Name="BTN_login" IsDefault="True" Grid.Row="2" Height="40" Width="150" FontSize="22" VerticalAlignment="Center" HorizontalAlignment="Center" Background="#92d050" Foreground="#222" FontWeight="Medium" BorderBrush="#77a941" BorderThickness="2">Войти</Button>
+            <Button x:Name="BTN_pword_show" Visibility="Hidden" Click="pword_show_Click" Width="40" Height="40" Background="#0000" BorderBrush="#0000" Grid.Row="1" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="340,0,-15,0">
+                <Image>
+                    <Image.Source>
+                        <DrawingImage>
+                            <DrawingImage.Drawing>
+                                <DrawingGroup ClipGeometry="M0,0 V1316 H2224 V0 H0 Z">
+                                    <GeometryDrawing Brush="#aaa" Geometry="F1 M2224,1316z M0,0z M1112.01,118.227C814.387,118.227 572.24,360.373 572.24,658 572.24,955.627 814.387,1197.77 1112.01,1197.77 1409.64,1197.77 1651.77,955.627 1651.77,658 1651.77,360.373 1409.64,118.227 1112.01,118.227z M1112.01,1269.13C998.96,1269.13 887.013,1253.69 779.307,1223.25 674.92,1193.75 574.8,1150.25 481.693,1093.99 304.787,987.08 157.467,836.693 54.2932,658 157.467,479.307 304.787,328.92 481.693,222.013 574.8,165.747 674.92,122.253 779.307,92.7467 887.013,62.3066 998.96,46.8667 1112.01,46.8667 1225.07,46.8667 1337,62.3066 1444.71,92.7467 1549.09,122.253 1649.23,165.747 1742.32,222.013 1919.23,328.92 2066.55,479.307 2169.72,658 2066.55,836.693 1919.23,987.08 1742.32,1093.99 1649.23,1150.25 1549.09,1193.75 1444.71,1223.25 1337,1253.69 1225.07,1269.13 1112.01,1269.13z" />
+                                    <GeometryDrawing Brush="#aaa" Geometry="F1 M2224,1316z M0,0z M1112.01,1151.11C839.667,1151.11 618.907,930.334 618.907,658 618.907,385.667 839.667,164.894 1112.01,164.894 1384.35,164.894 1605.11,385.667 1605.11,658 1605.11,930.334 1384.35,1151.11 1112.01,1151.11z M1112.01,0.200317C633.053,0.200317 216.187,265.92 0.733398,658 216.187,1050.08 633.053,1315.8 1112.01,1315.8 1590.96,1315.8 2007.84,1050.08 2223.28,658 2007.84,265.92 1590.96,0.200317 1112.01,0.200317z M893.307,113.867C677.947,200.734 525.574,411.907 525.574,658 525.574,904.094 677.947,1115.27 893.307,1202.13 859.174,1195.72 825.373,1187.77 792,1178.35 691.64,1149.97 595.36,1108.16 505.827,1054.05 343.413,955.894 206.933,819.654 108.547,658 206.933,496.347 343.413,360.107 505.827,261.947 595.36,207.84 691.64,166.027 792,137.654 825.373,128.227 859.174,120.28 893.307,113.867z M1330.72,113.867C1364.84,120.28 1398.64,128.227 1432.01,137.654 1532.37,166.027 1628.67,207.84 1718.19,261.947 1880.6,360.107 2017.08,496.347 2115.48,658 2017.08,819.654 1880.6,955.894 1718.19,1054.05 1628.67,1108.16 1532.37,1149.97 1432.01,1178.35 1398.64,1187.77 1364.84,1195.72 1330.72,1202.13 1546.07,1115.27 1698.44,904.094 1698.44,658 1698.44,411.907 1546.07,200.734 1330.72,113.867z" />
+                                    <GeometryDrawing Brush="#aaa" Geometry="F1 M2224,1316z M0,0z M1425.25,658C1425.25,831 1285,971.24 1112.01,971.24 939.013,971.24 798.773,831 798.773,658 798.773,485 939.013,344.76 1112.01,344.76 1285,344.76 1425.25,485 1425.25,658z" />
+                                </DrawingGroup>
+                            </DrawingImage.Drawing>
+
+                        </DrawingImage>
+
+                    </Image.Source>
+                </Image>
+            </Button>
+            <Button x:Name="BTN_pword_hide" MouseLeave="pword_hide_MouseLeave" Visibility="Hidden" Click="pword_hide_Click" Width="40" Height="40" Background="#0000" BorderBrush="#0000" Grid.Row="1" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="340,0,-15,0">
+                <Image>
+                    <Image.Source>
+                        <DrawingImage>
+                            <DrawingImage.Drawing>
+                                <DrawingGroup ClipGeometry="M0,0 V1654 H2223 V0 H0 Z">
+                                    <GeometryDrawing Brush="#aaa" Geometry="F1 M2223,1654z M0,0z M369.986,407.867C217.96,517.8 91.3062,660.68 0.452881,825.987 215.893,1218.07 632.773,1483.8 1111.72,1483.8 1288.73,1483.8 1457.28,1447.49 1610.31,1381.92L1406.15,1221.59C1323.99,1282.84 1222.08,1319.09 1111.72,1319.09 839.386,1319.09 618.626,1098.33 618.626,825.987 618.626,757.76 632.493,692.774 657.533,633.68L369.986,407.867z M1111.72,168.187C934.066,168.187,764.96,204.747,611.493,270.774L815.986,431.374C898.373,369.534 1000.77,332.893 1111.72,332.893 1384.07,332.893 1604.83,553.654 1604.83,825.987 1604.83,894.8 1590.75,960.32 1565.28,1019.81L1852.12,1245.08C2004.75,1135 2131.88,991.787 2223,825.987 2007.55,433.92 1590.68,168.187 1111.72,168.187z M1401.05,1336.25L1418.52,1349.97C1396.19,1356 1373.69,1361.37 1351.08,1366.05 1344.63,1367.39 1338.15,1368.68 1331.67,1369.91 1355.43,1360.28 1378.6,1349.04 1401.05,1336.25z M369.373,526.054L547.413,665.88C532.707,717.68 525.293,771.28 525.293,825.987 525.293,1072.08 677.667,1283.25 893.013,1370.13 858.893,1363.71 825.093,1355.77 791.72,1346.33 691.36,1317.96 595.08,1276.15 505.547,1222.04 343.133,1123.89 206.653,987.654 108.266,826 144.466,766.547 186.013,710.214 232.186,658 274.266,610.44 320.227,566.24 369.373,526.054z M891.72,282.093C867.453,291.92,843.813,303.427,820.907,316.56L803.04,302.52C825.707,296.347 848.56,290.867 871.533,286.093 878.24,284.707 884.973,283.36 891.72,282.093z M1330.43,281.854C1364.56,288.28 1398.36,296.214 1431.73,305.64 1532.09,334.014 1628.37,375.84 1717.91,429.934 1880.32,528.094 2016.8,664.334 2115.19,825.987 2078.87,885.64 2037.15,942.174 1990.75,994.547 1948.47,1042.29 1902.24,1086.65 1852.83,1126.96L1675.57,987.76C1690.59,935.467 1698.16,881.307 1698.16,825.987 1698.16,579.894 1545.79,368.72 1330.43,281.854z" />
+                                    <GeometryDrawing Brush="#aaa" Geometry="F1 M2223,1654z M0,0z M807.414,751.4L1256.32,1103.92C1213.07,1126.48 1163.88,1139.23 1111.72,1139.23 938.733,1139.23 798.48,998.974 798.48,825.987 798.48,800.28 801.574,775.307 807.414,751.4z" />
+                                    <GeometryDrawing Brush="#aaa" Geometry="F1 M2223,1654z M0,0z M1424.96,825.987C1424.96,852.307,1421.71,877.867,1415.61,902.28L965.573,548.867C1009.2,525.8 1058.93,512.747 1111.72,512.747 1284.72,512.747 1424.96,653 1424.96,825.987z" />
+                                    <GeometryDrawing Brush="#aaa" Geometry="F1 M2223,1654z M0,0z M2138.67,1548.68L2056.28,1653.59 84.7859,105.307 167.159,0.41339 2138.67,1548.68z" />
+                                    <GeometryDrawing Brush="#aaa" Geometry="F1 M2223,1654z M0,0z M1621.29,1004.47C1641.35,947.32 1651.49,887.44 1651.49,825.987 1651.49,528.36 1409.36,286.227 1111.72,286.227 1006.05,286.227 905.093,316.213 817.6,373.293L704.44,284.427C834.747,238.227 971.4,214.854 1111.72,214.854 1224.77,214.854 1336.72,230.293 1444.43,260.733 1548.81,290.24 1648.95,333.733 1742.04,390 1918.95,496.907 2066.27,647.294 2169.44,825.987 2128.44,896.973 2080.16,963.987 2025.68,1025.49 1973.44,1084.48 1915.44,1138.48 1852.91,1186.36L1621.29,1004.47z M1111.72,1437.12C998.666,1437.12 886.733,1421.69 779.026,1391.24 674.64,1361.73 574.507,1318.24 481.413,1261.99 304.507,1155.07 157.187,1004.69 54.0134,826 94.8934,755.227 142.987,688.413 197.24,627.08 249.267,568.267 307,514.4 369.24,466.613L601.613,649.107C581.92,705.813 571.96,765.16 571.96,825.987 571.96,1123.61 814.093,1365.76 1111.72,1365.76 1216.79,1365.76 1317.27,1336.07 1404.45,1279.59L1517.24,1368.17C1387.47,1413.96,1251.41,1437.12,1111.72,1437.12z" />
+                                </DrawingGroup>
+                            </DrawingImage.Drawing>
+                        </DrawingImage>
+                    </Image.Source>
+                </Image>
+            </Button>
+
+            <uc:LoginCaptcha x:Name="LoginCaptcha" HorizontalAlignment="Center" Width="300" Height="200" Grid.RowSpan="3" Background="#eeeeee"></uc:LoginCaptcha>
+
+            <TextBlock x:Name="TB_RetryTime" Grid.Row="3" HorizontalAlignment="Center" Foreground="#AA5555"></TextBlock>
+        </Grid>
+        <Image HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Row="0" Source="/logo.ico"/>
+    </Grid>
+    
+</Window>

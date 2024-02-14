@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="29767d21cb804017bbe501a1fa1e8383" Name="Diagram1">
+        <EntityTypeShape EntityType="lab20Model.done_service" Width="1.5" PointX="5.25" PointY="2.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="lab20Model.insurance_bills" Width="1.5" PointX="8.25" PointY="2.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="lab20Model.insurance_company" Width="1.5" PointX="1.5" PointY="14.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="lab20Model.order" Width="1.5" PointX="3" PointY="9.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="lab20Model.order_status" Width="1.5" PointX="0.75" PointY="7.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="lab20Model.patient" Width="1.5" PointX="0.75" PointY="9.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="lab20Model.role" Width="1.5" PointX="0.75" PointY="3.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="lab20Model.service" Width="1.5" PointX="3" PointY="18.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="lab20Model.sysdiagrams" Width="1.5" PointX="5.75" PointY="6.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="lab20Model.user" Width="1.5" PointX="3" PointY="2.375" IsExpanded="true" />
+        <AssociationConnector Association="lab20Model.FK_done_service_order" ManuallyRouted="false" />
+        <AssociationConnector Association="lab20Model.FK_done_service_service" ManuallyRouted="false" />
+        <AssociationConnector Association="lab20Model.FK_done_service_user" ManuallyRouted="false" />
+        <AssociationConnector Association="lab20Model.FK_insurance_bills_insurance_company" ManuallyRouted="false" />
+        <AssociationConnector Association="lab20Model.FK_insurance_bills_user" ManuallyRouted="false" />
+        <AssociationConnector Association="lab20Model.FK_patient_insurance_company" ManuallyRouted="false" />
+        <AssociationConnector Association="lab20Model.FK_order_order_status" ManuallyRouted="false" />
+        <AssociationConnector Association="lab20Model.FK_order_patient" ManuallyRouted="false" />
+        <AssociationConnector Association="lab20Model.FK_user_role" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

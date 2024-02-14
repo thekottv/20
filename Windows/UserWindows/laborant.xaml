@@ -1,0 +1,90 @@
+﻿<Window x:Class="_20.Windows.UserWindows.laborant"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:_20.Windows.UserWindows"
+        mc:Ignorable="d"
+        Title="№20" WindowStartupLocation="CenterScreen" MinHeight="675" MinWidth="1200">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="60"/>
+            <RowDefinition Height="1*"/>
+        </Grid.RowDefinitions>
+        <Grid Grid.Row="0" Background="#92d050">
+            <Button x:Name="BTN_Logout" Click="BTN_Logout_Click" VerticalAlignment="Center" HorizontalAlignment="Right" Background="#0000" BorderThickness="4" BorderBrush="#0000" Margin="5" Width="50" Height="50">
+                <Image>
+                    <Image.Source>
+                        <DrawingImage>
+                            <DrawingImage.Drawing>
+                                <DrawingGroup ClipGeometry="M0,0 V38 H38 V0 H0 Z">
+                                    <DrawingGroup Opacity="1">
+                                        <DrawingGroup.ClipGeometry>
+                                            <RectangleGeometry RadiusX="0" RadiusY="0" Rect="0,0,38,38" />
+                                        </DrawingGroup.ClipGeometry>
+                                        <GeometryDrawing Brush="#333" Geometry="F1 M38,38z M0,0z M36.1458,14.5223L30.0041,8.38059C29.7055,8.09217 29.3055,7.93258 28.8904,7.93619 28.4752,7.93979 28.0781,8.10631 27.7845,8.39987 27.491,8.69344 27.3245,9.09056 27.3209,9.5057 27.3172,9.92085 27.4768,10.3208 27.7653,10.6194L33.907,16.7612C34.0895,16.9473 34.2489,17.1546 34.382,17.3787 34.3583,17.3787 34.3393,17.366 34.3155,17.366L9.4825,17.4167C9.06258,17.4167 8.65985,17.5835 8.36292,17.8804 8.06599,18.1774 7.89917,18.5801 7.89917,19 7.89917,19.4199 8.06599,19.8227 8.36292,20.1196 8.65985,20.4165 9.06258,20.5833 9.4825,20.5833L34.306,20.5327C34.3503,20.5327 34.3868,20.5105 34.4295,20.5073 34.2891,20.7752 34.111,21.0215 33.9007,21.2388L27.7589,27.3806C27.6077,27.5266 27.4871,27.7014 27.4041,27.8945 27.3211,28.0877 27.2774,28.2955 27.2756,28.5057 27.2738,28.7159 27.3138,28.9244 27.3935,29.119 27.4731,29.3136 27.5906,29.4904 27.7393,29.6391 27.888,29.7877 28.0647,29.9053 28.2593,29.9849 28.4539,30.0645 28.6624,30.1046 28.8726,30.1027 29.0829,30.1009 29.2906,30.0572 29.4838,29.9743 29.677,29.8913 29.8517,29.7707 29.9978,29.6194L36.1395,23.4777C37.3268,22.29 37.9938,20.6794 37.9938,19 37.9938,17.3206 37.3268,15.71 36.1395,14.5223L36.1458,14.5223z" />
+                                        <GeometryDrawing Brush="#333" Geometry="F1 M38,38z M0,0z M11.0833,34.8333L7.91667,34.8333C6.65689,34.8333 5.44871,34.3329 4.55791,33.4421 3.66711,32.5513 3.16667,31.3431 3.16667,30.0833L3.16667,7.91667C3.16667,6.65689 3.66711,5.44871 4.55791,4.55791 5.44871,3.66711 6.65689,3.16667 7.91667,3.16667L11.0833,3.16667C11.5033,3.16667 11.906,2.99985 12.2029,2.70292 12.4999,2.40599 12.6667,2.00326 12.6667,1.58333 12.6667,1.16341 12.4999,0.76068 12.2029,0.463748 11.906,0.166815 11.5033,0 11.0833,0L7.91667,0C5.81781,0.00251411 3.80563,0.837396 2.32151,2.32151 0.837396,3.80563 0.00251411,5.81781 0,7.91667L0,30.0833C0.00251411,32.1822 0.837396,34.1944 2.32151,35.6785 3.80563,37.1626 5.81781,37.9975 7.91667,38L11.0833,38C11.5033,38 11.906,37.8332 12.2029,37.5363 12.4999,37.2393 12.6667,36.8366 12.6667,36.4167 12.6667,35.9967 12.4999,35.594 12.2029,35.2971 11.906,35.0001 11.5033,34.8333 11.0833,34.8333z" />
+                                    </DrawingGroup>
+                                </DrawingGroup>
+                            </DrawingImage.Drawing>
+                        </DrawingImage>
+                    </Image.Source>
+                </Image>
+            </Button>
+            <Border Width="50" Height="50" HorizontalAlignment="Right" Margin="5,5,65,5" CornerRadius="5" BorderThickness="2" BorderBrush="#2220">
+                <Border.Background>
+                    <ImageBrush x:Name="IMG_Ava" ImageSource="D:\Шарага\Палыч\Палыч новое на удаленку\Session 1\laborant_2.png" Stretch="UniformToFill"/>
+                </Border.Background>
+            </Border>
+            <TextBlock x:Name="TB_Name" Foreground="#333" Text="Павлов Михаил" FontSize="20" FontWeight="DemiBold" Height="30" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0,0,130,0"/>
+            <TextBlock x:Name="TB_Role" Foreground="#545454" Text="Лаборант" FontSize="20" Height="30" HorizontalAlignment="Right" VerticalAlignment="Bottom" Margin="0,0,130,0"/>
+
+            <TextBlock x:Name="TB_SessionTime" Foreground="#333" Text="Время сессии: 01:40:32" FontSize="20" FontWeight="DemiBold" Height="30" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,0,0,0"/>
+            <TextBlock x:Name="TB_SessionWarning" Visibility="Hidden" Foreground="#b33" Text="[ ! ] Время Вашей сессии подходит к концу." FontSize="20" FontWeight="DemiBold" Height="30" HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="10,0,0,0">
+                <TextBlock.Effect>
+                    <DropShadowEffect BlurRadius="8" ShadowDepth="1" Color="#fff" Opacity="0.2"/>
+                </TextBlock.Effect>
+            </TextBlock>
+        </Grid>
+        <TabControl Grid.Row="1" BorderThickness="0" Background="#ddd">
+            <TabControl.Template>
+                <ControlTemplate TargetType="TabControl">
+                    <DockPanel>
+                        <UniformGrid IsItemsHost="True" Rows="1" DockPanel.Dock="Top"></UniformGrid>
+                        <ContentPresenter ContentSource="SelectedContent"></ContentPresenter>
+                    </DockPanel>
+                </ControlTemplate>
+            </TabControl.Template>
+            <TabItem Header="Исследования биоматериала">
+                <Grid Background="#efefef">
+                    <DataGrid x:Name="DGridProbirki" SelectionChanged="DGridProbirki_SelectionChanged" SelectionMode="Single" AutoGenerateColumns="False" IsReadOnly="True">
+                        <DataGrid.Columns>
+                            <DataGridTextColumn Header="№" Width="15" Binding="{Binding ID}"/>
+                            <DataGridTextColumn Header="Дата поступления" Width="*" Binding="{Binding dateOfOrder}"/>
+                            <DataGridTextColumn Header="Статус исследования" Width="*" Binding="{Binding order_status.status}"/>
+                            <DataGridTextColumn Header="Фио Пациента" Width="*" Binding="{Binding patient.FIO}"/>
+                            <DataGridTemplateColumn Width="120">
+                                <DataGridTemplateColumn.CellTemplate>
+                                    <DataTemplate>
+                                        <Button x:Name="BTN_More"  Click="More_Click" Content="Подробности" VerticalAlignment="Center" VerticalContentAlignment="Center" Height="25" Background="#92d050" Foreground="#222"/>
+                                        <!--Click="More_Click"-->
+                                    </DataTemplate>
+                                </DataGridTemplateColumn.CellTemplate>
+                            </DataGridTemplateColumn>
+                        </DataGrid.Columns>
+                    </DataGrid>
+                    <Button Width="150" Height="30" HorizontalAlignment="Right" VerticalAlignment="Bottom"  Margin="20"  Content="Принять Биоматериал" Background="#92d050" Foreground="#222" BorderBrush="#77a941" BorderThickness="2" Click="BTN_NewProbirka_click">
+                        <Button.Effect>
+                            <DropShadowEffect BlurRadius="15" ShadowDepth="5" Direction="280" Color="#FF6D9C3B" Opacity="0.3" RenderingBias="Performance"/>
+                        </Button.Effect>
+                    </Button>
+                </Grid>
+            </TabItem>
+            <TabItem Header="Сформировать отчеты">
+                <Grid Background="#efefef">
+                    <Button Width="300" Height="100" HorizontalAlignment="Center" VerticalAlignment="Center" Content="Сформировать отчеты"/>
+                </Grid>
+            </TabItem>
+        </TabControl>
+    </Grid>
+</Window>
